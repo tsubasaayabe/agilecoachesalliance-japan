@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agile Coaches Alliance Japan - アジャイルコーチたちのコミュニティ</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background-color: #f8f9fa;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+        }
+
+        header p {
+            font-size: 1rem;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: white;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #667eea;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #764ba2;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Section */
+        section {
+            padding: 4rem 1rem;
+            background-color: white;
+            margin-bottom: 1rem;
+        }
+
+        section:nth-child(odd) {
+            background-color: #f8f9fa;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: #667eea;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        section h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* About Section */
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #475569;
+        }
+
+        .about-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        /* Members Grid */
+        .members-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+
+        .member-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .member-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(102, 126, 234, 0.15);
+        }
+
+        .member-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+        }
+
+        .member-role {
+            font-size: 0.9rem;
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .member-avatar {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .footer-links {
+            margin-top: 1rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 0.9rem;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            opacity: 0.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            section {
+                padding: 2rem 1rem;
+            }
+
+            section h2 {
+                font-size: 1.5rem;
+            }
+
+            .members-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .member-card {
+                padding: 1.5rem;
+            }
+
+            .about-content {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Agile Coaches Alliance Japan</h1>
+        <p>アジャイルコーチたちのコミュニティ</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">私たちについて</a></li>
+            <li><a href="#members">メンバー</a></li>
+            <li><a href="#contact">お問い合わせ</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- About Section -->
+        <section id="about">
+            <div class="container">
+                <h2>私たちについて</h2>
+                <div class="about-content">
+                    <p>
+                        Agile Coaches Alliance Japanは、アジャイル開発における実践的なコーチングと
+                        組織変革を推進する専門家たちの集まりです。
+                    </p>
+                    <p>
+                        私たちは、チームやプロジェクトが本来のアジャイルの価値を実現できるよう、
+                        ハンズオンのサポートと知見を提供します。変化する環境の中で、
+                        組織が継続的に成長し、イノベーションを起こせる環境をつくることが、
+                        私たちの使命です。
+                    </p>
+                    <p>
+                        共に学び、共に成長する。そんなコミュニティでありたいと考えています。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Members Section -->
+        <section id="members">
+            <div class="container">
+                <h2>メンバー紹介</h2>
+                <div class="members-grid">
+                    <div class="member-card">
+                        <div class="member-avatar">渡</div>
+                        <h3>渡邊</h3>
+                        <p class="member-role">代表</p>
+                        <p>アジャイル推進、組織変革の専門家として、多くの企業のトランスフォーメーションを支援してきました。</p>
+                    </div>
+
+                    <div class="member-card">
+                        <div class="member-avatar">清</div>
+                        <h3>清水</h3>
+                        <p class="member-role">コーチ</p>
+                        <p>スクラムマスターとしての実務経験を活かし、チームの自己組織化を促進します。</p>
+                    </div>
+
+                    <div class="member-card">
+                        <div class="member-avatar">望</div>
+                        <h3>望月</h3>
+                        <p class="member-role">シニアコーチ</p>
+                        <p>エンタープライズレベルのアジャイル導入経験が豊富で、複雑な組織構造の改善を得意とします。</p>
+                    </div>
+
+                    <div class="member-card">
+                        <div class="member-avatar">山</div>
+                        <h3>山崎</h3>
+                        <p class="member-role">コーチ</p>
+                        <p>技術文化の醸成とデリバリーの効率化に向けて、実践的なアドバイスを提供します。</p>
+                    </div>
+
+                    <div class="member-card">
+                        <div class="member-avatar">安</div>
+                        <h3>安達</h3>
+                        <p class="member-role">アジャイル認定スペシャリスト</p>
+                        <p>リーダーシップとチームコラボレーションの構築に注力し、組織文化の変革を支援します。</p>
+                    </div>
+
+                    <div class="member-card">
+                        <div class="member-avatar">中</div>
+                        <h3>中谷</h3>
+                        <p class="member-role">コーチ</p>
+                        <p>プロダクトマネジメントとアジャイル手法の融合を通じて、ビジネス価値の最大化を実現します。</p>
+                    </div>
+
+                    <div class="member-card">
+                        <div class="member-avatar">綾</div>
+                        <h3>綾部</h3>
+                        <p class="member-role">コーチ</p>
+                        <p>レトロスペクティブの促進や継続的改善のプロセス設計で、チームの成長を加速させます。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="container">
+                <h2>お問い合わせ</h2>
+                <div class="about-content">
+                    <p>
+                        アジャイル導入やコーチング、ワークショップに関するご質問・ご相談は
+                        お気軽にお問い合わせください。
+                    </p>
+                    <p style="margin-top: 2rem;">
+                        <strong>Email: </strong>info@agilecoaches-alliance-japan.example<br>
+                        <strong>Web: </strong><a href="#" style="color: #667eea; text-decoration: none;">www.agilecoaches-alliance-japan.example</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Agile Coaches Alliance Japan. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#">プライバシーポリシー</a>
+            <a href="#">利用規約</a>
+        </div>
+    </footer>
+</body>
+</html>
