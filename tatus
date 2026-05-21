@@ -1,0 +1,69 @@
+[1mdiff --git a/index.html b/index.html[m
+[1mindex 8ad23e2..d2c1748 100644[m
+[1m--- a/index.html[m
+[1m+++ b/index.html[m
+[36m@@ -267,12 +267,11 @@[m
+                     </p>[m
+                     <p>[m
+                         私たちは、チームやプロジェクトが本来のアジャイルの価値を実現できるよう、[m
+[31m-                        ハンズオンのサポートと知見を提供します。変化する環境の中で、[m
+[31m-                        組織が継続的に成長し、イノベーションを起こせる環境をつくることが、[m
+[31m-                        私たちの使命です。[m
+[32m+[m[32m                        様々な活動を実施します。[m
+[32m+[m[32m                        日本に新しい価値を提供することが、私たちの使命です。[m
+                     </p>[m
+                     <p>[m
+[31m-                        共に学び、共に成長する。そんなコミュニティでありたいと考えています。[m
+[32m+[m[32m                        みなさんと共に学び、共に成長する。そんなコミュニティでありたいと考えています。[m
+                     </p>[m
+                 </div>[m
+             </div>[m
+[36m@@ -293,42 +292,42 @@[m
+                     <div class="member-card">[m
+                         <div class="member-avatar">清</div>[m
+                         <h3>清水</h3>[m
+[31m-                        <p class="member-role">コーチ</p>[m
+[32m+[m[32m                        <p class="member-role">代表</p>[m
+                         <p>スクラムマスターとしての実務経験を活かし、チームの自己組織化を促進します。</p>[m
+                     </div>[m
+ [m
+                     <div class="member-card">[m
+                         <div class="member-avatar">望</div>[m
+                         <h3>望月</h3>[m
+[31m-                        <p class="member-role">シニアコーチ</p>[m
+[32m+[m[32m                        <p class="member-role">メンバー</p>[m
+                         <p>エンタープライズレベルのアジャイル導入経験が豊富で、複雑な組織構造の改善を得意とします。</p>[m
+                     </div>[m
+ [m
+                     <div class="member-card">[m
+                         <div class="member-avatar">山</div>[m
+                         <h3>山崎</h3>[m
+[31m-                        <p class="member-role">コーチ</p>[m
+[32m+[m[32m                        <p class="member-role">メンバー</p>[m
+                         <p>技術文化の醸成とデリバリーの効率化に向けて、実践的なアドバイスを提供します。</p>[m
+                     </div>[m
+ [m
+                     <div class="member-card">[m
+                         <div class="member-avatar">安</div>[m
+                         <h3>安達</h3>[m
+[31m-                        <p class="member-role">アジャイル認定スペシャリスト</p>[m
+[32m+[m[32m                        <p class="member-role">メンバー</p>[m
+                         <p>リーダーシップとチームコラボレーションの構築に注力し、組織文化の変革を支援します。</p>[m
+                     </div>[m
+ [m
+                     <div class="member-card">[m
+                         <div class="member-avatar">中</div>[m
+                         <h3>中谷</h3>[m
+[31m-                        <p class="member-role">コーチ</p>[m
+[32m+[m[32m                        <p class="member-role">メンバー</p>[m
+                         <p>プロダクトマネジメントとアジャイル手法の融合を通じて、ビジネス価値の最大化を実現します。</p>[m
+                     </div>[m
+ [m
+                     <div class="member-card">[m
+                         <div class="member-avatar">綾</div>[m
+                         <h3>綾部</h3>[m
+[31m-                        <p class="member-role">コーチ</p>[m
+[32m+[m[32m                        <p class="member-role">メンバー</p>[m
+                         <p>レトロスペクティブの促進や継続的改善のプロセス設計で、チームの成長を加速させます。</p>[m
+                     </div>[m
+                 </div>[m
